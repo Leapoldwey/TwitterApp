@@ -8,5 +8,6 @@ RUN mvn clean package -DskipTests
 FROM eclipse-temurin:21-jdk-alpine
 WORKDIR /app
 COPY --from=builder /app/target/*.jar app.jar
-ENTRYPOINT ["java", "-jar", "app.jar"]
 EXPOSE 8081
+#ENV SPRING_DATASOURCE_URL=jdbc:mysql://172.17.0.2:3306/ums
+ENTRYPOINT ["java", "-jar", "app.jar"]
