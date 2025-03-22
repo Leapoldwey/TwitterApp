@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/twitter
+    username: root
+    password: passw
+server:
+  port: 8081
+
+ums:
+  host: http://localhost
+  port: 8080
+  paths:
+    user: /users
